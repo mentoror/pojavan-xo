@@ -15,7 +15,7 @@ public class Board {
     }
 
     public void initFigures() {
-        // TODO initialize array here
+        System.out.println("sadf");
     }
 
     public boolean setFigure(int x, int y, Figure figure) {
