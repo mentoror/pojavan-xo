@@ -14,6 +14,8 @@ class Main {
 
         //testGame(paidConsoleView);
 
+        // Hello, ololo
+
         final Board board = new Board();
         board.initFigures();
         board.showBoard();
