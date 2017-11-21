@@ -1,5 +1,6 @@
 package com.pojavan.xo.controller;
 
+import com.pojavan.xo.model.Board;
 import com.pojavan.xo.model.Player;
 import com.pojavan.xo.util.CoordinateHelper;
 
@@ -9,18 +10,25 @@ public class Game {
 
     public static final String GAME_NAME = "XO";
 
+    private Board board;
+
+    public Game(Board board, Player[] players) {
+        this.board = board;
+        this.players = players;
+    }
+
     private Player[] players;
 
     public Player[] getPlayers() {
         return players;
     }
 
-    public Player currentPlayer() {
-        return null;
+    public Board getBoard() {
+        return board;
     }
 
-    public void initPlayers() {
-        // TODO initialize players
+    public Player currentPlayer() {
+        return null;
     }
 
     public void showPlayers() {
