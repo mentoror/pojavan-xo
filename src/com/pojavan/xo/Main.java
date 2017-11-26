@@ -9,6 +9,7 @@ class Main {
 
     public static void main(String[] args) {
         final Board board = new Board();
+        board.initBoard(false);
 
         final Game game = new Game(board, new Player[]{
                 new Player("Player #1", "X"),

@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class Board {
 
-    public static final int FIELD_SIZE = 3;
+    private static final int FIELD_SIZE = 3;
 
     private Figure[][] figures = new Figure[FIELD_SIZE][FIELD_SIZE];
 
@@ -15,20 +15,40 @@ public class Board {
     }
 
     public void initEmptyBoard() {
-        // TODO initialize array here with empty fields
+        for (int i = 0; i < FIELD_SIZE; i++) {
+            for (int j = 0; j < FIELD_SIZE; j++) {
+                figures[i][j] = new Figure("");
+            }
+        }
     }
 
     public void initBoard(boolean reverse) {
-        // TODO initialize board with 'X' and 'O' values
-        // if reverse == false
-        // O O X
-        // O X O
-        // X O O
+        if (reverse) {
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    System.out.println(String.format("i = %d. j = %d", i, j));
+                    if (i == j) {
+                        figures[i][j] = new Figure("X");
+                    } else {
+                        figures[i][j] = new Figure("0");
 
-        // if reverse == true
-        // X O O
-        // O X O
-        // O O X
+                    }
+                }
+            }
+        } else {
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    System.out.println(String.format("i = %d. j = %d", i, j));
+                    if (i == (FIELD_SIZE - j - 1)) {
+                        figures[i][j] = new Figure("X");
+                    } else {
+                        figures[i][j] = new Figure("0");
+
+                    }
+                }
+            }
+
+        }
     }
 
     public Figure getFigure(int x, int y) {
