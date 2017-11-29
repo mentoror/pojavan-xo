@@ -21,7 +21,6 @@ class Main {
 
 
     public static void testGame(ConsoleView view) {
-        view.showBoard();
         view.printPlayers();
         view.start();
     }

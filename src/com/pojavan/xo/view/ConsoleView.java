@@ -11,14 +11,15 @@ public class ConsoleView {
     public static final String SEPARATOR_SYMBOL = "-";
     public static final int SEPARATOR_ITEMS_COUNT = 12;
     private final Game game;
+    final private MenuView menu;
 
     public ConsoleView(Game game) {
         this.game = game;
+        menu = new MenuView();
     }
 
     public void start() {
-        getCoordinate("X");
-        getCoordinate("Y");
+        menu.start(this);
     }
 
     public void printGameName() {
@@ -26,10 +27,6 @@ public class ConsoleView {
     }
 
     public void printPlayers() {
-        /*for (int i = 0; i < game.getPlayers().length; i++) {
-            System.out.println(game.getPlayers()[i].getPlayerName());
-        }
-*/
         for (Player player : game.getPlayers()) {
             System.out.println(player.getPlayerName());
         }

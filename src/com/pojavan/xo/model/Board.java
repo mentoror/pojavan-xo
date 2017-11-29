@@ -14,23 +14,6 @@ public class Board {
         return figures;
     }
 
-    public void initEmptyBoard() {
-        // TODO initialize array here with empty fields
-    }
-
-    public void initBoard(boolean reverse) {
-        // TODO initialize board with 'X' and 'O' values
-        // if reverse == false
-        // O O X
-        // O X O
-        // X O O
-
-        // if reverse == true
-        // X O O
-        // O X O
-        // O O X
-    }
-
     public Figure getFigure(int x, int y) {
         return figures[x][y];
     }
