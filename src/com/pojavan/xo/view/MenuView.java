@@ -25,8 +25,27 @@ public class MenuView {
                 start(view);
                 break;
             case 3:
-                System.out.println("Options");
                 // TODO Created nested menu for options
+                subChoise();
+
+                int subOption = scanner.nextInt();
+
+                switch (subOption){
+                    case 1:
+                        System.out.println("Volume");
+                        break;
+                    case 2:
+                        System.out.println("Video");
+                        break;
+                    case 3:
+                        System.out.println("Neznay");
+                        break;
+                        default:
+                            System.out.println("Sorry, please try again");
+                            start(view);
+
+                }
+
                 break;
             case 4:
                 System.out.println("Saving...");
@@ -38,5 +57,11 @@ public class MenuView {
                 System.out.println("Sorry, please try again");
                 start(view);
         }
+    }
+
+    public void subChoise (){
+        System.out.println("1 - Volume");
+        System.out.println("2 - Video");
+        System.out.println("3 - Neznay");
     }
 }
